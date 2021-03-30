@@ -1,21 +1,21 @@
+import 'package:churrasco_hammer/src/controllers/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:churrasco_hammer/views/events_view.dart';
-import 'package:churrasco_hammer/data.dart';
+import 'package:churrasco_hammer/src/views/events_view.dart';
 
-class LoginView extends StatefulWidget {
+class LoginView extends StatelessWidget {
   static const routeName = '/';
   static const pageName = 'Login';
 
-  @override
-  State<StatefulWidget> createState() {
-    return LoginViewState();
-  }
-}
+  final TextEditingController id = TextEditingController();
 
-class LoginViewState extends State<StatefulWidget> {
-  final id = TextEditingController();
+  LoginController loginController;
+
+  LoginView() {
+    loginController = LoginController(employeeId: id);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,11 +42,7 @@ class LoginViewState extends State<StatefulWidget> {
                 style: TextStyle(color: Colors.white, fontSize: 16),
               ),
               onPressed: () {
-                var employers = ['11122233344'];
-                for (var index in Data.employers) {
-                  employers.add(index['id']);
-                }
-                if (employers.contains('11122233344')) {
+                if (loginController.login()) {
                   Navigator.pushReplacementNamed(context, EventsView.routeName);
                 } else {
                   showDialog(

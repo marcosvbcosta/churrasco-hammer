@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:churrasco_hammer/views/event.dart';
+import 'package:churrasco_hammer/src/views/event.dart';
 import 'package:churrasco_hammer/data.dart';
 
 class EventsView extends StatefulWidget {
