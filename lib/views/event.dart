@@ -4,6 +4,13 @@ class EventView extends StatefulWidget {
   static const routeName = '/event';
   static const pageName = 'Evento';
 
+  final Object data;
+
+  EventView({
+    Key key,
+    @required this.data,
+  }) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return EventViewState();

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.churrasco_hummer">
+    package="com.marcosvbcosta.churrasco_hammer">
    <application
-        android:label="churrasco_hummer"
+        android:label="churrasco_hammer"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

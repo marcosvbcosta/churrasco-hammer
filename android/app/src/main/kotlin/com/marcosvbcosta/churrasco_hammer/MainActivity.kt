@@ -1,4 +1,4 @@
-package com.example.churrasco_hummer
+package com.marcosvbcosta.churrasco_hammer
 
 import io.flutter.embedding.android.FlutterActivity
 

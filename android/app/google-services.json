@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "500390477610",
+    "project_id": "churrasco-hammer",
+    "storage_bucket": "churrasco-hammer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500390477610:android:97cc8507953f979e0be853",
+        "android_client_info": {
+          "package_name": "com.marcosvbcosta.churrasco_hammer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "500390477610-qjce81js335tn7rrq92pgu601d7thmdu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8sgTVeffxCMuEemWwqcS0NRqz_-tG4Xg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "500390477610-qjce81js335tn7rrq92pgu601d7thmdu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "500390477610-q2hn8in1garb5euubsbfcmr9g7k3d2si.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.marcosvbcosta.churrascoHummer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

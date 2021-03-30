@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:churrasco_hummer/views/events_view.dart';
-import 'package:churrasco_hummer/data.dart';
+import 'package:churrasco_hammer/views/events_view.dart';
+import 'package:churrasco_hammer/data.dart';
 
 class LoginView extends StatefulWidget {
-  static const routeName = '/login';
+  static const routeName = '/';
   static const pageName = 'Login';
 
   @override
@@ -41,39 +41,37 @@ class LoginViewState extends State<StatefulWidget> {
                 'Entrar',
                 style: TextStyle(color: Colors.white, fontSize: 16),
               ),
-              onPressed: () => login(id.text, context),
+              onPressed: () {
+                var employers = ['11122233344'];
+                for (var index in Data.employers) {
+                  employers.add(index['id']);
+                }
+                if (employers.contains('11122233344')) {
+                  Navigator.pushReplacementNamed(context, EventsView.routeName);
+                } else {
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: Text('Erro'),
+                        content: Text('Código Inválido!'),
+                        actions: [
+                          TextButton(
+                            child: Text('Fechar'),
+                            onPressed: () => {
+                              Navigator.of(context).pop(),
+                            },
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                }
+              },
             ),
           ],
         ),
       ),
-    );
-  }
-}
-
-login(id, BuildContext context) {
-  var employers = ['11122233344'];
-  for (var index in Data.employers) {
-    employers.add(index['id']);
-  }
-  if (employers.contains(id)) {
-    Navigator.of(context).pushReplacementNamed(EventsView.routeName);
-  } else {
-    return showDialog(
-      context: context,
-      builder: (context) {
-        return AlertDialog(
-          title: Text('Erro'),
-          content: Text('Código Inválido!'),
-          actions: [
-            TextButton(
-              child: Text('Fechar'),
-              onPressed: () => {
-                Navigator.of(context).pop(),
-              },
-            ),
-          ],
-        );
-      },
     );
   }
 }
